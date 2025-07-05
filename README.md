@@ -1,7 +1,7 @@
 # allstar-hardware-notes
 My notes on preparing old hardware to run Allstar (and other things) reliably.
 
-A few days ago I worked on an Allstar node on a Dell Optiplex 3050 USFF (Dell Micro) a friend had dropped off that would become unresponsive after being left on for a while. I didn't find anything wrong with the hardware directly, but did make a few updates that seemed to improve reliability.
+A few days ago I worked on an Allstar node on a Dell Optiplex 3050 USFF (Dell Micro) a friend had dropped off. The machine would become unresponsive after being left on for a while. I didn't find anything wrong with the hardware directly, but did make a few updates that seemed to improve reliability.
 
 Firstly, I edited grub adding these arguments to the kernel command line:
 ``pci=noaer pcie_aspm=off``
