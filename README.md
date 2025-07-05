@@ -9,11 +9,15 @@ Firstly, I edited grub adding these arguments to the kernel command line:
 The first disables a form of error handling for the pci bus, something that is "broken" on a lot of older hardware, and the second disables pci express power management, where the kernel tries to turn off unused pci express devices. 
 
 To make this fix, edit the default kernel command line and then update grub. 
+
 ``sudo nano /etc/default/grub``
 
 edit the command line, look for this line:
+
 ``GRUB_CMDLINE_LINUX_DEFAULT="quiet"``
+
 and change it to
+
 ``GRUB_CMDLINE_LINUX_DEFAULT="quiet pci=noaer pcie_aspm=off"``
 
 Now, update the grub bootloader configuration and reboot
